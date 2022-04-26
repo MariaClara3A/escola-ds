@@ -10,18 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using atv02.Views;
 
-namespace atv02.Views
+namespace atv02
 {
     /// <summary>
-    /// Lógica interna para EscolaFormWindow.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class EscolaFormWindow : Window
+    public partial class MainWindow : Window
     {
-        public EscolaFormWindow()
+        public MainWindow()
         {
             InitializeComponent();
+            var form = new EscolaFormWindow();
+            form.Show();
+
+            this.Close();
         }
     }
 }
