@@ -10,23 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using atv02.Views;
+using ProjetoEscola.Views;
 
-namespace atv02
+namespace ProjetoEscola
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica interna para Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : Window
     {
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
-            var form = new EscolaFormWindow();
-            form.Show();
-
+            MenuWindow window = new MenuWindow();   
+            window.ShowDialog();
             this.Close();
         }
     }
